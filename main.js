@@ -314,9 +314,12 @@ function reveal() {
     }
 
     var ifrm = document.createElement("iframe");
-    ifrm.setAttribute("src", "https://www.youtube.com/embed/bdqj0T6F5HU?controls=0&loop=1&autoplay=1");
-    //ifrm.style.width = `${w}px`;
-    //ifrm.style.height = `${h}px`;
+    ifrm.setAttribute("src", "https://www.youtube.com/embed/bdqj0T6F5HU?autoplay=1&controls=1&loop=1&mute=1");
+    ifrm.style.width = `${w}px`;
+    ifrm.style.height = `${h}px`;
     ifrm.style.border = "none";
     document.querySelector("#video").appendChild(ifrm);
+
+    var audio = document.getElementById("audio");
+    audio.play();
 }
